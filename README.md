@@ -1,7 +1,7 @@
 GifAnimationDrawable
 ==============
 
-GifAnimationDrawable is a simple library (consisting of 2 classes) that makes it easy to display animated GIFs on the Android platform by converting the animated GIF file into an AnimationDrawable. This allows animated gifs to be used anywhere a Drawable is accepted, including backgrounds, standard ImageViews and anywhere else. For more detail, see http://engineering.hipmob.com/2013/12/03/GifAnimationDrawable-for-Android/
+GifAnimationDrawable is a simple library (consisting of 2 classes) that makes it easy to display animated GIFs on the Android platform by converting the animated GIF file into an AnimationDrawable. This allows animated gifs to be used anywhere a Drawable is accepted, including backgrounds, standard ImageViews and anywhere else. For more detail, see [~~http://engineering.hipmob.com/2013/...~~](http://engineering.hipmob.com/2013/12/03/GifAnimationDrawable-for-Android/) [wayback machine copy of bing cache copy](http://web.archive.org/web/20160727025643/http://cc.bingj.com/cache.aspx?q=&d=4949405906570123&mkt=en-GB&setlang=en-US&w=b2-70gZzTO_KusdvC65iqvrjv7TAlew3)
 
 Animated GIFs are a simple way to make animations and are supported on Android using the Movie class: unfortunately the Movie class isn't quite as easy to use in many places as one might like. GifAnimationDrawable makes it trivial to use an animated gif as a standard Android Drawable, for backgrounds on buttons or views or as the main image in an ImageView. Solutions (such as [this][1]) require build-time processing, which isn't usable with downloaded images.
 
@@ -35,15 +35,32 @@ or
 AnimationDrawable drawable = new GifAnimationDrawable(InputStream source, true);
 ```
 
+Note that from lolipop you'll need to manually call `AnimationDrawable.start();`
+
 Build
 =====
-The library build uses **ant**: you will need to have the ANDROID_SDK environment variable setup (or edit the ***build.xml*** file to point to the right place).
+~~The library build uses **ant**: you will need to have the ANDROID_SDK environment variable setup (or edit the ***build.xml*** file to point to the right place).~~
 
-Open a shell in the ***library*** directory and run **ant**. The JAR file produced (***gifanimationdrawable.jar***) will contain the required files: add it to your Android app's **libs** folder, and then import the <code>com.hipmob.gifanimationdrawable.GifAnimationDrawable</code> class.
+~~Open a shell in the ***library*** directory and run **ant**. The JAR file produced (***gifanimationdrawable.jar***) will contain the required files: add it to your Android app's **libs** folder,~~
+Currently the project is available on jitpack, so you can import via gradle:
+
+    dependencies {
+	    compile 'com.github.0lumide:gifanimateddrawable:66d8658949'
+	}
+
+and maven:
+
+    <dependency>
+	    <groupId>com.github.0lumide</groupId>
+	    <artifactId>gifanimateddrawable</artifactId>
+	    <version>66d8658949</version>
+	</dependency>
+as long as the jitpack.io repository has [been added](https://jitpack.io/#howto)
+and then import the <code>com.hipmob.gifanimationdrawable.GifAnimationDrawable</code> class.
 
 Notes
 =====
-* We stood on the shoulders of giants here: the GifDecoder we use is based on the original source at http://code.google.com/p/animated-gifs-in-android/. We added code to defer processing of all frames other than the first till a later time (so we could run that in a separate thread). 
+* We stood on the shoulders of giants here: the GifDecoder we use is based on the original source at http://code.google.com/p/animated-gifs-in-android/. We added code to defer processing of all frames other than the first till a later time (so we could run that in a separate thread).
 * Our sample animations (used in the sample app) come from http://www.animationfactory.com/en/samples.html.
 
 Author

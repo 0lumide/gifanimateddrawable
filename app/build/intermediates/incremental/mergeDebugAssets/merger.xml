@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="unspecified"><source path="W:\Android-Studio\gifanimateddrawable\app\build\intermediates\exploded-aar\gifanimateddrawable\lib\unspecified\assets"/></dataSet><dataSet config="main"><source path="W:\Android-Studio\gifanimateddrawable\app\src\main\assets"/><source path="W:\Android-Studio\gifanimateddrawable\app\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="W:\Android-Studio\gifanimateddrawable\app\src\debug\assets"/></dataSet></merger>
