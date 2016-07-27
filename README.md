@@ -45,7 +45,7 @@ Build
 Currently the project is available on jitpack, so you can import via gradle:
 
     dependencies {
-	    compile 'com.github.0lumide:gifanimateddrawable:66d8658949'
+	    compile 'com.github.0lumide:gifanimateddrawable:v1.0'
 	}
 
 and maven:
@@ -53,7 +53,7 @@ and maven:
     <dependency>
 	    <groupId>com.github.0lumide</groupId>
 	    <artifactId>gifanimateddrawable</artifactId>
-	    <version>66d8658949</version>
+	    <version>v1.0</version>
 	</dependency>
 as long as the jitpack.io repository has [been added](https://jitpack.io/#howto)
 and then import the <code>com.hipmob.gifanimationdrawable.GifAnimationDrawable</code> class.
