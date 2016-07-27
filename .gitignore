@@ -1,7 +1,8 @@
-*~
-bin
-gen
-dist
-build
-resources/*.class
-docs/api*
+*.iml
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
