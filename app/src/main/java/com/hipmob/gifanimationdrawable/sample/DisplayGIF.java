@@ -33,12 +33,12 @@ public class DisplayGIF extends Activity implements OnClickListener
 		try{
 			android.util.Log.v("GifAnimationDrawable", "===>One");
 			little = new GifAnimationDrawable(getResources().openRawResource(R.raw.anim1));
-			little.setOneShot(true);
+			little.start();
 			android.util.Log.v("GifAnimationDrawable", "===>Two");
 			imagebutton.setImageDrawable(little);
 			android.util.Log.v("GifAnimationDrawable", "===>Three");
 			big = new GifAnimationDrawable(getResources().openRawResource(R.raw.anim2));
-			big.setOneShot(true);
+            big.start();
 			android.util.Log.v("GifAnimationDrawable", "===>Four");
 		}catch(IOException ioe){
 			
